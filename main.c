@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:30:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/19 20:45:26 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/19 23:42:14 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,11 @@ int main(int argc, char **argv)
 	fill_stack(split,&stack_a);
 	//five_case(&stack_a,&stack_b);
 	indexing_elements(&stack_a);
-	while(stack_a)
-	{
-		printf("data = %d -- index = %d \n",stack_a->data, stack_a->index);
-		stack_a = stack_a->next;
-	}
+	hundred_case(&stack_a);
+	// while(stack_a)
+	// {
+	// 	printf("data = %d -- index = %d \n",stack_a->data, stack_a->index);
+	// 	stack_a = stack_a->next;
+	// }
+
 }

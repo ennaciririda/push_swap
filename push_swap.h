@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:54:34 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/19 21:38:26 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/19 23:34:37 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,10 @@ void	fill_stack(char **split, t_stack **stack_a);
 int		find_min(t_stack **stack_a);
 int		find_min_with_cond(t_stack **stack_a);
 int		find_max(t_stack **stack_a);
-int		get_index(t_stack **stack_a);
+ int get_index(t_stack **stack_a, int data);
+int		get_index_of_min(t_stack **stack_a);
 void	push_element_to_top(t_stack **stack_a);
 void	five_case(t_stack **stack_a, t_stack **stack_b);
 void	indexing_elements(t_stack **stack_a);
+void hundred_case(t_stack **stack_a);
 #endif
