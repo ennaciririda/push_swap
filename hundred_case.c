@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 23:10:36 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/20 18:36:42 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/20 21:05:17 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,27 +30,29 @@ void hundred_case(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack *tmp;
 	int i = 0;
-	int j = 0;
 	tmp = *stack_a;
 	int num_of_chunks;
 
-	num_of_chunks = 2;
+	num_of_chunks = ft_lstsize(*stack_a);
 	indexing_elements(&tmp);
-	while (j <= 5)
-	{
+
 		i = i + 3;
 		tmp = *stack_a;
 		while (tmp)
 		{
-			if (tmp->index < i)
+			if (tmp->index < 3)
+			{
+				// while (get_index(stack_a, tmp->data) != 1)
+				// 	ra(stack_a, 1);
+				pb(stack_a, stack_b);
+				// break;
+			}
+			else
 			{
 				while (get_index(stack_a, tmp->data) != 1)
 					ra(stack_a, 1);
-				pb(stack_a, stack_b);
-				break;
 			}
 			tmp = tmp->next;
 		}
-		j++;
-	}
+
 }
