@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:54:34 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/19 23:34:37 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/20 14:53:51 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,5 @@ int		get_index_of_min(t_stack **stack_a);
 void	push_element_to_top(t_stack **stack_a);
 void	five_case(t_stack **stack_a, t_stack **stack_b);
 void	indexing_elements(t_stack **stack_a);
-void hundred_case(t_stack **stack_a);
+void hundred_case(t_stack **stack_a, t_stack **stack_b);
 #endif
