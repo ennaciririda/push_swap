@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 23:10:36 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/20 17:16:18 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/20 18:36:42 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ void hundred_case(t_stack **stack_a, t_stack **stack_b)
 	tmp = *stack_a;
 	int num_of_chunks;
 
-	num_of_chunks = ft_lstsize(*stack_a) / 20;
+	num_of_chunks = 2;
 	indexing_elements(&tmp);
-	while (j <= num_of_chunks)
+	while (j <= 5)
 	{
-		i = i + 20;
+		i = i + 3;
 		tmp = *stack_a;
 		while (tmp)
 		{
@@ -51,7 +51,6 @@ void hundred_case(t_stack **stack_a, t_stack **stack_b)
 			}
 			tmp = tmp->next;
 		}
-		printf("chi haja");
 		j++;
 	}
 }
