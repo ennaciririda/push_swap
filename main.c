@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:30:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/20 18:26:07 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/22 21:58:06 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,13 @@ void fill_stack(char **split, t_stack **stack_a)
 		ft_lstadd_back(stack_a, ft_lstnew(ft_atoi(split[i++])));
 }
 
+
+
 int main(int argc, char **argv)
 {
 	t_stack *stack_a;
+	t_stack *tmp;
+	// int i = 0;
 	t_stack *stack_b;
 	stack_b = NULL;
 	char **split;
@@ -30,17 +34,30 @@ int main(int argc, char **argv)
 	check_duplication(split);
 	fill_stack(split,&stack_a);
 	//five_case(&stack_a,&stack_b);
-	hundred_case(&stack_a, &stack_b);
-	// while(stack_a)
+	tmp = stack_a;
+	indexing_elements(&stack_a);
+	// while(tmp)
 	// {
-	// 	printf("%d ",stack_a->data);
-	// 	stack_a = stack_a->next;
+	// 	printf("data %d --- index : %d\n",tmp->data, tmp->index);
+	// 	tmp = tmp->next;
 	// }
-	//indexing_elements(&stack_a);
-	while(stack_b)
-	{
-		printf("%d ",stack_b->data);
-		stack_b = stack_b->next;
-	}
+	// pb(&stack_a,&stack_b);
+	// printf("--------------\n");
+	// tmp = stack_a;
+	// while(tmp)
+	// {
+	// 	printf("data %d --- index : %d\n",tmp->data, tmp->index);
+	// 	tmp = tmp->next;
+	// }
+	algo(&stack_a, &stack_b, 4);
+	tmp = stack_a;
+	// printf("-----------------------");
+	// while(tmp)
+	// {
+	// 	printf("%d",tmp->data);
+	// 	tmp = tmp->next;
+	// }
+
+		//printf("%d hfghf", ft_lstsize(stack_b));
 
 }

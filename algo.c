@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hundred_case.c                                     :+:      :+:    :+:   */
+/*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 23:10:36 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/20 21:05:17 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/22 19:10:35 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,33 +26,33 @@ int get_index(t_stack **stack_a, int data)
 	return j;
 }
 
-void hundred_case(t_stack **stack_a, t_stack **stack_b)
+void algo(t_stack **stack_a, t_stack **stack_b, int size_of_chunk)
 {
 	t_stack *tmp;
 	int i = 0;
-	tmp = *stack_a;
+	// int j = 0;
 	int num_of_chunks;
+	int s;
+	tmp = *stack_b;
+	num_of_chunks = ft_lstsize(*stack_a) / size_of_chunk + 1;
+	printf("%d\n", num_of_chunks);
+	s = size_of_chunk;
+	size_of_chunk += s;
 
-	num_of_chunks = ft_lstsize(*stack_a);
-	indexing_elements(&tmp);
+	while (*stack_a)
+	{
+		while((*stack_a)->index > num_of_chunks && get_index(stack_a,(*stack_a)->data))
+			ra(stack_a,1);
+		pb(stack_a,stack_b);
+	}
 
-		i = i + 3;
-		tmp = *stack_a;
-		while (tmp)
-		{
-			if (tmp->index < 3)
-			{
-				// while (get_index(stack_a, tmp->data) != 1)
-				// 	ra(stack_a, 1);
-				pb(stack_a, stack_b);
-				// break;
-			}
-			else
-			{
-				while (get_index(stack_a, tmp->data) != 1)
-					ra(stack_a, 1);
-			}
-			tmp = tmp->next;
-		}
+	tmp = *stack_b;
+
+	while(i < ft_lstsize(*stack_b))
+	{
+		push_element_to_top(stack_b);
+		pa(stack_a,stack_b);
+		i++;
+	}
 
 }

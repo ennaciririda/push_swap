@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:32:04 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/20 18:16:45 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/22 13:11:09 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	find_min_with_cond(t_stack **stack_a)
 	t_stack *tmp;
 	int i;
 	tmp = *stack_a;
-	i = find_max(stack_a) + 2;
+	i = find_max(stack_a) + 1;
 	while(tmp)
 	{
 		if(i > tmp->data && tmp->index == -1)
