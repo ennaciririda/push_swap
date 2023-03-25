@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 23:10:36 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/22 19:10:35 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/25 01:43:26 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,33 +26,57 @@ int get_index(t_stack **stack_a, int data)
 	return j;
 }
 
+void push_element_to_top_(t_stack **stack_a, int data)
+{
+
+	if (get_index(stack_a, data) < (ft_lstsize(*stack_a) / 2) + 2)
+	{
+		while (get_index(stack_a, data) != 1)
+			ra(stack_a, 1);
+	}
+	else
+	{
+		while (get_index(stack_a, data) != 1)
+			rra(stack_a, 1);
+	}
+}
+
 void algo(t_stack **stack_a, t_stack **stack_b, int size_of_chunk)
 {
 	t_stack *tmp;
+	int chunk;
+	int chunk_size;
+	int j;
 	int i = 0;
-	// int j = 0;
-	int num_of_chunks;
-	int s;
-	tmp = *stack_b;
-	num_of_chunks = ft_lstsize(*stack_a) / size_of_chunk + 1;
-	printf("%d\n", num_of_chunks);
-	s = size_of_chunk;
-	size_of_chunk += s;
-
-	while (*stack_a)
+	chunk = ft_lstsize(*stack_a) / size_of_chunk;
+	chunk_size = size_of_chunk;
+	int max = 0;
+	j = 0;
+	tmp = *stack_a;
+	while (j < chunk)
 	{
-		while((*stack_a)->index > num_of_chunks && get_index(stack_a,(*stack_a)->data))
-			ra(stack_a,1);
-		pb(stack_a,stack_b);
+		tmp = *stack_a;
+		while (tmp)
+		{
+			if ((tmp)->index < size_of_chunk)
+			{
+				push_element_to_top_(stack_a, (tmp)->data);
+				pb(stack_a, stack_b);
+				i++;
+			}
+			if (i == size_of_chunk)
+				break;
+			(tmp) = (tmp)->next;
+		}
+		size_of_chunk += chunk_size;
+		j++;
 	}
-
-	tmp = *stack_b;
-
-	while(i < ft_lstsize(*stack_b))
+	j = 0;
+	max = ft_lstsize(*stack_b);
+	while(j < max)
 	{
-		push_element_to_top(stack_b);
+		push_element_to_top_(stack_b, find_max(stack_b));
 		pa(stack_a,stack_b);
-		i++;
+		j++;
 	}
-
 }

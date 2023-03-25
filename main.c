@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:30:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/22 21:58:06 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/25 01:30:46 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int main(int argc, char **argv)
 	t_stack *tmp;
 	// int i = 0;
 	t_stack *stack_b;
+	stack_a = NULL;
 	stack_b = NULL;
 	char **split;
 	check_arguments(argc);
@@ -36,6 +37,7 @@ int main(int argc, char **argv)
 	//five_case(&stack_a,&stack_b);
 	tmp = stack_a;
 	indexing_elements(&stack_a);
+
 	// while(tmp)
 	// {
 	// 	printf("data %d --- index : %d\n",tmp->data, tmp->index);
@@ -49,15 +51,15 @@ int main(int argc, char **argv)
 	// 	printf("data %d --- index : %d\n",tmp->data, tmp->index);
 	// 	tmp = tmp->next;
 	// }
-	algo(&stack_a, &stack_b, 4);
-	tmp = stack_a;
-	// printf("-----------------------");
+	algo(&stack_a, &stack_b, 20);
+	// push_element_to_top_(&stack_a, -65);
+	// tmp = stack_b;
+	// printf("-----------------------\n");
 	// while(tmp)
 	// {
-	// 	printf("%d",tmp->data);
+	// 	printf("%d  ",tmp->data);
 	// 	tmp = tmp->next;
 	// }
-
 		//printf("%d hfghf", ft_lstsize(stack_b));
 
 }

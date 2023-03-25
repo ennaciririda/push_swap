@@ -6,14 +6,14 @@
 #    By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/18 15:27:45 by rennacir          #+#    #+#              #
-#    Updated: 2023/03/21 22:07:58 by rennacir         ###   ########.fr        #
+#    Updated: 2023/03/24 00:51:23 by rennacir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+# CFLAGS = -Wall -Wextra -Werror
 
 SRC  =  main.c find_min.c five_case.c ft_atoi.c ft_lstadd_back.c\
 		ft_lstadd_front.c ft_lstlast.c ft_lstnew.c ft_lstsize.c\

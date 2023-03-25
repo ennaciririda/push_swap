@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 21:29:00 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/22 16:47:46 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/25 01:36:37 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void pb(t_stack **stack_a, t_stack **stack_b)
 		*stack_a = (*stack_a)->next;
 		free(tmp);
 		tmp = NULL;
-		write(1,"pb\n",4);
+		write(1,"pb\n",3);
 	}
 	else
 		write(2,"stack a is empty\n",18);
@@ -53,11 +53,12 @@ void ra(t_stack **stack_a, int i)
 	{
 	tmp = *stack_a;
 	(*stack_a) = (*stack_a)->next;
-	ft_lstadd_back(stack_a,ft_lstnew(tmp->data));
+	tmp->next = NULL;
+	ft_lstadd_back(stack_a, tmp);
 	if(i == 1)
 		write(1,"ra\n",4);
-	free(tmp);
-	tmp = NULL;
+	// free(tmp);
+	// tmp = NULL;
 	}
 	else
 		write(2,"Error : stack a is empty\n",26);
@@ -70,11 +71,12 @@ void rb(t_stack **stack_b, int i)
 	{
 	tmp = *stack_b;
 	(*stack_b) = (*stack_b)->next;
-	ft_lstadd_back(stack_b,ft_lstnew(tmp->data));
+	tmp->next = NULL;
+	ft_lstadd_back(stack_b,tmp);
 	if(i == 1)
 		write(1,"rb\n",4);
-	free(tmp);
-	tmp = NULL;
+	// free(tmp);
+	// tmp = NULL;
 	}
 	else
 		write(2,"Error : stack b is empty\n",26);
