@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_element_to_top.c                              :+:      :+:    :+:   */
+/*   normal_case.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/15 20:50:32 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/25 17:02:08 by rennacir         ###   ########.fr       */
+/*   Created: 2023/03/25 17:01:59 by rennacir          #+#    #+#             */
+/*   Updated: 2023/03/25 17:14:45 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void push_element_to_top(t_stack **stack_a)
+void normal_case(t_stack **stack_a)
 {
+	t_stack *tmp;
+	int count;
+	tmp = *stack_a;
+	count = 1;
 
-	if(get_index_of_min(stack_a) < (ft_lstsize(*stack_a) / 2) + 2)
+	while(tmp && tmp->next)
 	{
-		while(get_index_of_min(stack_a) != 1)
-			ra(stack_a,1);
+		if(tmp->data < tmp->next->data)
+			count++;
+		tmp = tmp->next;
 	}
-	else
-	{
-		while(get_index_of_min(stack_a) != 1)
-			rra(stack_a,1);
-	}
+	if(count == ft_lstsize(*stack_a))
+		exit(0);
 }

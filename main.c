@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:30:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/25 01:30:46 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/25 17:29:41 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 {
 	t_stack *stack_a;
 	t_stack *tmp;
-	// int i = 0;
+	int		num;
 	t_stack *stack_b;
 	stack_a = NULL;
 	stack_b = NULL;
@@ -34,26 +34,18 @@ int main(int argc, char **argv)
 	split = check(argc, argv);
 	check_duplication(split);
 	fill_stack(split,&stack_a);
-	//five_case(&stack_a,&stack_b);
-	tmp = stack_a;
 	indexing_elements(&stack_a);
+	normal_case(&stack_a);
+	num = ft_lstsize(stack_a);
+	if(num == 3)
+		three_case(&stack_a);
+	else if (num == 5)
+		five_case(&stack_a,&stack_b);
+	else
+		algo(&stack_a, &stack_b, 20);
 
-	// while(tmp)
-	// {
-	// 	printf("data %d --- index : %d\n",tmp->data, tmp->index);
-	// 	tmp = tmp->next;
-	// }
-	// pb(&stack_a,&stack_b);
-	// printf("--------------\n");
-	// tmp = stack_a;
-	// while(tmp)
-	// {
-	// 	printf("data %d --- index : %d\n",tmp->data, tmp->index);
-	// 	tmp = tmp->next;
-	// }
-	algo(&stack_a, &stack_b, 20);
 	// push_element_to_top_(&stack_a, -65);
-	// tmp = stack_b;
+	// tmp = stack_a;
 	// printf("-----------------------\n");
 	// while(tmp)
 	// {
