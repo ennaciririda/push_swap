@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:30:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/25 17:29:41 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/26 01:12:45 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ int main(int argc, char **argv)
 	char **split;
 	check_arguments(argc);
 	split = check(argc, argv);
-	check_duplication(split);
-	fill_stack(split,&stack_a);
+	check_duplication(split); fill_stack(split,&stack_a);
 	indexing_elements(&stack_a);
 	normal_case(&stack_a);
 	num = ft_lstsize(stack_a);
@@ -42,7 +41,7 @@ int main(int argc, char **argv)
 	else if (num == 5)
 		five_case(&stack_a,&stack_b);
 	else
-		algo(&stack_a, &stack_b, 20);
+		algo(&stack_a, &stack_b, 2);
 
 	// push_element_to_top_(&stack_a, -65);
 	// tmp = stack_a;

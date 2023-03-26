@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 13:48:13 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/19 21:29:25 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/26 01:13:11 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void sa(t_stack *stack_a, int i)
 	{
 		swap(&stack_a->data, &stack_a->next->data);
 		if(i == 1)
-			write(1,"sa\n",4);
+			write(1,"sa\n",3);
 	}
 }
 void sb(t_stack *stack_b, int i)
@@ -34,12 +34,12 @@ void sb(t_stack *stack_b, int i)
 	{
 		swap(&stack_b->data, &stack_b->next->data);
 		if(i == 1)
-		write(1,"sb\n",4);
+		write(1,"sb\n",3);
 	}
 }
 void ss(t_stack *stack_a, t_stack *stack_b)
 {
 	sa(stack_a, 0);
 	sa(stack_b, 0);
-	write(1,"ss\n",4);
+	write(1,"ss\n",3);
 }
