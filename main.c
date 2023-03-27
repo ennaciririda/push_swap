@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:30:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/26 01:12:45 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/27 02:34:33 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,25 +32,32 @@ int main(int argc, char **argv)
 	char **split;
 	check_arguments(argc);
 	split = check(argc, argv);
-	check_duplication(split); fill_stack(split,&stack_a);
+	check_duplication(split);
+	fill_stack(split,&stack_a);
 	indexing_elements(&stack_a);
 	normal_case(&stack_a);
 	num = ft_lstsize(stack_a);
 	if(num == 3)
 		three_case(&stack_a);
-	else if (num == 5)
+	else if (num > 3 && num <= 20)
 		five_case(&stack_a,&stack_b);
-	else
-		algo(&stack_a, &stack_b, 2);
+	else if (num > 20 && num <= 50)
+		algo(&stack_a, &stack_b, 15);
+	else if (num > 50 && num <= 200)
+		algo(&stack_a, &stack_b, 27);
+	else if (num > 200 && num <= 500)
+		algo(&stack_a, &stack_b, 30);
 
+	// system("leaks push_swap");
 	// push_element_to_top_(&stack_a, -65);
-	// tmp = stack_a;
+	tmp = stack_a;
 	// printf("-----------------------\n");
-	// while(tmp)
-	// {
-	// 	printf("%d  ",tmp->data);
-	// 	tmp = tmp->next;
-	// }
+	while(tmp)
+	{
+		printf("%d  ",tmp->data);
+		tmp = tmp->next;
+	}
 		//printf("%d hfghf", ft_lstsize(stack_b));
-
+	// 100 15 chunks
+	//50  27 chunks
 }
