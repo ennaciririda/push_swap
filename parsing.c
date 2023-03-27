@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:55:23 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/20 17:25:09 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/27 10:47:39 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,29 @@ void check_arguments(int argc)
 	{
 		write(2, "Error :argc must be more than 1\n", 33);
 		exit(1);
+	}
+}
+
+void check_max_int(char **splited)
+{
+	int i;
+
+	i = 0;
+	while(splited[i])
+	{
+		if(ft_atoi(splited[i]) > 2147483647)
+		{
+			write(2,"Error : argc most not be more than max of int",45);
+			exit(1);
+		}
+		else if (ft_atoi(splited[i]) < -2147483648)
+		{
+			write(2,"Error : argc most not be less than min of int",45);
+			exit(1);
+		}
+		else
+			return ;
+		i++;
 	}
 }
 

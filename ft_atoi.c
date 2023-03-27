@@ -6,13 +6,13 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:50:43 by rennacir          #+#    #+#             */
-/*   Updated: 2023/02/19 16:26:28 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/27 10:43:05 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	count_nbr(const char *str, int nbr)
+static long	count_nbr(const char *str, long nbr)
 {
 	while (*str >= '0' && *str <= '9')
 	{
@@ -22,14 +22,12 @@ static int	count_nbr(const char *str, int nbr)
 	return (nbr);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	int	s;
-	int	nbr;
-	int	i;
+	long	nbr;
 
 	s = 1;
-	i = 0;
 	nbr = 0;
 	while ((*str >= 9 && *str <= 13) || *str == 32)
 		str++;

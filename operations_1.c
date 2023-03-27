@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 21:29:00 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/26 22:15:06 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/27 08:47:28 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void pb(t_stack **stack_a, t_stack **stack_b)
 void ra(t_stack **stack_a, int i)
 {
 	t_stack * tmp;
-	if((*stack_a))
+	if((*stack_a) && (*stack_a)->next)
 	{
 	tmp = *stack_a;
 	(*stack_a) = (*stack_a)->next;
@@ -56,8 +56,6 @@ void ra(t_stack **stack_a, int i)
 	ft_lstadd_back(stack_a, tmp);
 	if(i == 1)
 		write(1,"ra\n",3);
-	// free(tmp);
-	// tmp = NULL;
 	}
 	else
 		write(2,"Error : stack a is empty\n",26);
@@ -74,8 +72,6 @@ void rb(t_stack **stack_b, int i)
 	ft_lstadd_back(stack_b,tmp);
 	if(i == 1)
 		write(1,"rb\n",3);
-	// free(tmp);
-	// tmp = NULL;
 	}
 	else
 		write(2,"Error : stack b is empty\n",26);

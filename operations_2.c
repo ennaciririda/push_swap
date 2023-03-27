@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 21:29:27 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/26 22:31:59 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/27 08:44:26 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void rra(t_stack **stack_a, int i)
 	t_stack *tmp1;
 	int j = 0;
 
-	if(*stack_a)
+	if(*stack_a && (*stack_a)->next)
 	{
 		tmp1 = *stack_a;
 		tmp = ft_lstlast(*stack_a);
