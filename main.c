@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:30:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/27 12:03:09 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/28 01:16:23 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ int main(int argc, char **argv)
 	else if (num > 20 && num <= 50)
 		algo(&stack_a, &stack_b, 15);
 	else if (num > 50 && num <= 200)
-		algo(&stack_a, &stack_b, 26);
+		algo(&stack_a, &stack_b, 5);
 	else if (num > 200 && num <= 500)
-		algo(&stack_a, &stack_b, 27);
+		algo(&stack_a, &stack_b, 8);
 	// rra(&stack_a,1);
 	// system("leaks push_swap");
 	// push_element_to_top_(&stack_a, -65);
