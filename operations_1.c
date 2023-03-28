@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 21:29:00 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/27 08:47:28 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/28 15:55:42 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void pb(t_stack **stack_a, t_stack **stack_b)
 void ra(t_stack **stack_a, int i)
 {
 	t_stack * tmp;
-	if((*stack_a) && (*stack_a)->next)
+	if((*stack_a))
 	{
 	tmp = *stack_a;
 	(*stack_a) = (*stack_a)->next;

@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:30:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/28 01:16:23 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/28 17:01:52 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int main(int argc, char **argv)
 	indexing_elements(&stack_a);
 	normal_case(&stack_a);
 	num = ft_lstsize(stack_a);
-
 	if (num == 2)
 		two_case(&stack_a);
 	else if(num == 3)
@@ -64,4 +63,5 @@ int main(int argc, char **argv)
 		//printf("%d hfghf", ft_lstsize(stack_b));
 	// 100 15 chunks
 	//50  27 chunks
+	return 0;
 }
