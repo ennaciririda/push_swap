@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:32:04 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/27 11:45:41 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/29 17:20:42 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,4 @@ void	indexing_elements(t_stack **stack_a)
 		}
 		tmp = tmp->next;
 	}
-
 }

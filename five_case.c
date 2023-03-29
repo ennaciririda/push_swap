@@ -6,21 +6,20 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 15:53:20 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/26 02:05:32 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/29 17:17:24 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void five_case(t_stack **stack_a, t_stack **stack_b)
+void	five_case(t_stack **stack_a, t_stack **stack_b)
 {
-	
-	while(ft_lstsize(*stack_a) != 3)
+	while (ft_lstsize(*stack_a) != 3)
 	{
 		push_element_to_top(stack_a);
-		pb(stack_a,stack_b);
+		pb(stack_a, stack_b);
 	}
 	three_case(stack_a);
-	while(*stack_b)
-		pa(stack_a,stack_b);
+	while (*stack_b)
+		pa(stack_a, stack_b);
 }

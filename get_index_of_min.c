@@ -6,22 +6,25 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 20:04:58 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/27 02:31:34 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/29 17:20:29 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int get_index_of_min(t_stack **stack_a)
+int	get_index_of_min(t_stack **stack_a)
 {
-	int j = 0;
-	int i = find_min(stack_a);
-	t_stack *tmp;
+	t_stack	*tmp;
+	int		i;
+	int		j;
+
+	i = find_min(stack_a);
+	j = 0;
 	tmp = *stack_a;
-	while(tmp->data != i)
+	while (tmp->data != i)
 	{
 		j++;
 		tmp = tmp->next;
 	}
-	return j;
+	return (j);
 }

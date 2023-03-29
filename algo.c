@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 23:10:36 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/29 02:30:32 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/29 22:33:03 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int get_index(t_stack **stack_a, int data)
 
 void push_element_to_top_(t_stack **stack_a, int data, int flag)
 {
-	if (get_index(stack_a, data) < (ft_lstsize(*stack_a) / 2) + 1)
+	if (get_index(stack_a, data) < (ft_lstsize(*stack_a) / 2) - 1)
 	{
 		while (get_index(stack_a, data) != 0)
 		{
@@ -70,7 +70,8 @@ void algo(t_stack **stack_a, t_stack **stack_b, int size_of_chunk)
 		{
 			if ((tmp)->index < chunk)
 			{
-				push_element_to_top_(stack_a, (tmp)->data, 0);
+				while (get_index(stack_a, tmp->data) != 0)
+					ra(stack_a, 1);
 				pb(stack_a, stack_b);
 				if(tmp->index < chunk -(chunk_size / 2))
 					rb(stack_b,1);

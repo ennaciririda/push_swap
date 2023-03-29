@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 17:55:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/19 16:12:01 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/29 17:16:39 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 int	find_min(t_stack **stack_a)
 {
-	t_stack *tmp;
-	int i;
+	t_stack	*tmp;
+	int		i;
+
 	tmp = *stack_a;
 	i = tmp->data;
-	while(tmp)
+	while (tmp)
 	{
-		if(i > tmp->data)
+		if (i > tmp->data)
 			i = tmp->data;
 		tmp = tmp->next;
 	}
-	return i;
+	return (i);
 }
