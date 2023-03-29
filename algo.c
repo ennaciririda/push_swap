@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 23:10:36 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/28 00:08:58 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/29 02:30:32 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int get_index(t_stack **stack_a, int data)
 
 void push_element_to_top_(t_stack **stack_a, int data, int flag)
 {
-
 	if (get_index(stack_a, data) < (ft_lstsize(*stack_a) / 2) + 1)
 	{
 		while (get_index(stack_a, data) != 0)
@@ -85,10 +84,32 @@ void algo(t_stack **stack_a, t_stack **stack_b, int size_of_chunk)
 	}
 	j = 0;
 	max = ft_lstsize(*stack_b);
-	while(j < max)
+	while(*stack_b)
 	{
-		push_element_to_top_(stack_b, find_max(stack_b), 1337);
-		pa(stack_a,stack_b);
-		j++;
+		if (get_index(stack_b, find_max(stack_b)) < (max / 2 - 1)
+		&& get_index(stack_b,get_before_max(stack_b)) <  (max / 2 - 1)
+		&& get_index(stack_b,get_before_max(stack_b)) < get_index(stack_b, find_max(stack_b)))
+		{
+			push_element_to_top_(stack_b, get_before_max(stack_b), 1337);
+			pa(stack_a,stack_b);
+			push_element_to_top_(stack_b, find_max(stack_b), 1337);
+			pa(stack_a,stack_b);
+			sa(*stack_a,1);
+		}
+		else if (get_index(stack_b, find_max(stack_b)) > (max / 2 - 1)
+		&& get_index(stack_b,get_before_max(stack_b)) >  (max / 2 - 1)
+		&& get_index(stack_b,get_before_max(stack_b)) > get_index(stack_b, find_max(stack_b)))
+		{
+			push_element_to_top_(stack_b, get_before_max(stack_b), 1337);
+			pa(stack_a,stack_b);
+			push_element_to_top_(stack_b, find_max(stack_b), 1337);
+			pa(stack_a,stack_b);
+			sa(*stack_a,1);
+		}
+		else
+		{
+			push_element_to_top_(stack_b, find_max(stack_b), 1337);
+			pa(stack_a,stack_b);
+		}
 	}
 }
