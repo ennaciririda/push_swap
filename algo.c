@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 23:10:36 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/29 22:33:03 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/30 23:16:59 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void push_element_to_top_(t_stack **stack_a, int data, int flag)
 		}
 	}
 }
-
 
 void algo(t_stack **stack_a, t_stack **stack_b, int size_of_chunk)
 {

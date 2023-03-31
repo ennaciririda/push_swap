@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:30:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/29 18:00:22 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/31 00:53:22 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ int	main(int argc, char **argv)
 	else if (ft_lstsize(stack_a) > 50 && ft_lstsize(stack_a) <= 200)
 		algo(&stack_a, &stack_b, 5);
 	else if (ft_lstsize(stack_a) > 200 && ft_lstsize(stack_a) <= 500)
-		algo(&stack_a, &stack_b, 10);
+		algo(&stack_a, &stack_b, 8);
 	return (0);
 }

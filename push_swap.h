@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:54:34 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/29 00:55:22 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/31 01:15:41 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strjoin(int size, char **strs, char *sep);
 char	**ft_split(char const *s, char c);
 long	ft_atoi(const char *str);
 void	plus_or_minus_case(char *str);
-void check_max_int(char **splited);
+void	check_max_int(char **splited);
 t_stack	*ft_lstnew(int data);
 void	ft_lstadd_front(t_stack **lst, t_stack *new);
 void	ft_lstadd_back(t_stack **lst, t_stack *new);
@@ -55,18 +55,19 @@ void	rra(t_stack **stack_a, int i);
 void	rrb(t_stack **stack_b, int i);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
 void	three_case(t_stack **stack_a);
-void two_case(t_stack **stack_a);
+void	two_case(t_stack **stack_a);
 void	fill_stack(char **split, t_stack **stack_a);
 int		find_min(t_stack **stack_a);
 int		find_min_with_cond(t_stack **stack_a);
 int		find_max(t_stack **stack_a);
- int get_index(t_stack **stack_a, int data);
+int		get_index(t_stack **stack_a, int data);
 int		get_index_of_min(t_stack **stack_a);
 void	push_element_to_top(t_stack **stack_a);
 void	five_case(t_stack **stack_a, t_stack **stack_b);
 void	indexing_elements(t_stack **stack_a);
 void	algo(t_stack **stack_a, t_stack **stack_b, int size_of_chunk);
-void push_element_to_top_(t_stack **stack_a, int data, int flag);
-void normal_case(t_stack **stack_a);
-int get_before_max(t_stack **stack_b);
+void	push_element_to_top_(t_stack **stack_a, int data, int flag);
+void	normal_case(t_stack **stack_a);
+int		get_before_max(t_stack **stack_b);
+void	ch(t_stack **stack_a, int chunk);
 #endif

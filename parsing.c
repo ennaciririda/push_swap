@@ -6,13 +6,25 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:55:23 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/28 18:49:06 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/31 01:30:17 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void check_arguments(int argc)
+void	plus_or_minus_case(char *str)
+{
+	int i;
+
+	i = 0;
+	if ((str[i] == '+' && str[i + 1] == '\0') || (str[i] == '-' && str[i + 1] == '\0'))
+		{
+			write(2,"Error : agr must not contain only a signe",42);
+			exit(1);
+		}
+}
+
+void	check_arguments(int argc)
 {
 	if (argc == 1)
 	{
@@ -21,49 +33,37 @@ void check_arguments(int argc)
 	}
 }
 
-void check_max_int(char **splited)
+void	check_max_int(char **splited)
 {
 	int i;
 
 	i = 0;
-	while(splited[i])
+	while (splited[i])
 	{
-		if(ft_atoi(splited[i]) > 2147483647)
+		if (ft_atoi(splited[i]) > 2147483647)
 		{
-			write(2,"Error : argc most not be more than max of int",45);
+			write(2, "Error : argc most not be more than max of int", 45);
 			exit(1);
 		}
 		if(ft_atoi(splited[i]) < -2147483648)
 		{
-			write(2,"Error : argc most not be less than min of int",45);
+			write(2, "Error : argc most not be less than min of int", 45);
 			exit(1);
 		}
-		// if(ft_atoi(splited[i]) > 20)
-		// {
-		// 	printf("hello ");
-		// }
-		// else if (ft_atoi(splited[i]) < -2147483648)
-		// {
-		// 	write(2,"Error : argc most not be less than min of int",45);
-		// 	exit(1);
-		// }
-		// else
-		// 	return ;
 		i++;
 	}
 }
 
 void check_duplication(char **splited)
 {
-	int i = 0;
-	int j;
-	int count = 0;
-	while (splited[i])
-	{
-		count++;
-		i++;
-	}
+	int	i;
+	int	j;
+	int	count;
+
+	count = 0;
 	i = 0;
+	while (splited[count])
+		count++;
 	while (i < (count - 1))
 	{
 		j = i + 1;
@@ -100,7 +100,7 @@ char **check(int argc, char **argv)
 		{
 			if (split[i][k] < 48 || split[i][k] > 57)
 			{
-				write(2, "args must be integers", 22);
+				write(2, "args must be integers", 21);
 				exit(1);
 			}
 			k++;
@@ -108,16 +108,4 @@ char **check(int argc, char **argv)
 		i++;
 	}
 	return (split);
-}
-
-void	plus_or_minus_case(char *str)
-{
-	int i;
-
-	i = 0;
-	if((str[i] == '+' && str[i+ 1] == '\0') || (str[i] == '-' && str[i+ 1] == '\0'))
-		{
-			write(2,"Error : agr must not contain only a signe",42);
-			exit(1);
-		}
 }
