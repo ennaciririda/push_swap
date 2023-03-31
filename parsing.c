@@ -6,11 +6,20 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:55:23 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/31 02:01:28 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/31 21:29:07 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	help_fun(int i)
+{
+	if (i < 48 || i > 57)
+	{
+		write(2, "args must be integers", 21);
+		exit(1);
+	}
+}
 
 void	plus_or_minus_case(char *str)
 {
@@ -34,53 +43,6 @@ void	check_arguments(int argc)
 	}
 }
 
-void	check_max_int(char **splited)
-{
-	int	i;
-
-	i = 0;
-	while (splited[i])
-	{
-		if (ft_atoi(splited[i]) > 2147483647)
-		{
-			write(2, "Error : argc most not be more than max of int", 45);
-			exit(1);
-		}
-		if (ft_atoi(splited[i]) < -2147483648)
-		{
-			write(2, "Error : argc most not be less than min of int", 45);
-			exit(1);
-		}
-		i++;
-	}
-}
-
-void	check_duplication(char **splited)
-{
-	int	i;
-	int	j;
-	int	count;
-
-	count = 0;
-	i = 0;
-	while (splited[count])
-		count++;
-	while (i < (count - 1))
-	{
-		j = i + 1;
-		while (j < count)
-		{
-			if (ft_atoi(splited[i]) == ft_atoi(splited[j]))
-			{
-				write(2, "there is a duplicate number\n", 29);
-				exit(1);
-			}
-			j++;
-		}
-		i++;
-	}
-}
-
 char	**check(int argc, char **argv)
 {
 	char	**split;
@@ -100,11 +62,7 @@ char	**check(int argc, char **argv)
 			k++;
 		while (split[i][k])
 		{
-			if (split[i][k] < 48 || split[i][k] > 57)
-			{
-				write(2, "args must be integers", 21);
-				exit(1);
-			}
+			help_fun(split[i][k]);
 			k++;
 		}
 	}

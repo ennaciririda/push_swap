@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 17:01:59 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/31 02:52:00 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/31 20:23:30 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,4 @@ void	normal_case(t_stack **stack_a)
 	}
 	if (count == ft_lstsize(*stack_a))
 		exit(0);
-	else
-		printf("unsorted");
 }
