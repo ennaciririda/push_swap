@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 16:30:17 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/31 00:53:22 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/03/31 02:50:13 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	fill_stack(char **split, t_stack **stack_a)
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
-	t_stack	*stack_b;
+	// t_stack	*stack_b;
 	char	**split;
 
 	check_arguments(argc);
@@ -34,17 +34,17 @@ int	main(int argc, char **argv)
 	fill_stack(split, &stack_a);
 	indexing_elements(&stack_a);
 	normal_case(&stack_a);
-	if (ft_lstsize(stack_a) == 2)
-		two_case(&stack_a);
-	else if (ft_lstsize(stack_a) == 3)
-		three_case(&stack_a);
-	else if (ft_lstsize(stack_a) > 3 && ft_lstsize(stack_a) <= 20)
-		five_case(&stack_a, &stack_b);
-	else if (ft_lstsize(stack_a) > 20 && ft_lstsize(stack_a) <= 50)
-		algo(&stack_a, &stack_b, 15);
-	else if (ft_lstsize(stack_a) > 50 && ft_lstsize(stack_a) <= 200)
-		algo(&stack_a, &stack_b, 5);
-	else if (ft_lstsize(stack_a) > 200 && ft_lstsize(stack_a) <= 500)
-		algo(&stack_a, &stack_b, 8);
+	// if (ft_lstsize(stack_a) == 2)
+	// 	two_case(&stack_a);
+	// else if (ft_lstsize(stack_a) == 3)
+	// 	three_case(&stack_a);
+	// else if (ft_lstsize(stack_a) > 3 && ft_lstsize(stack_a) <= 20)
+	// 	five_case(&stack_a, &stack_b);
+	// else if (ft_lstsize(stack_a) > 20 && ft_lstsize(stack_a) <= 50)
+	// 	algo(&stack_a, &stack_b, 15);
+	// else if (ft_lstsize(stack_a) > 50 && ft_lstsize(stack_a) <= 200)
+	// 	algo(&stack_a, &stack_b, 5);
+	// else if (ft_lstsize(stack_a) > 200 && ft_lstsize(stack_a) <= 500)
+	// 	algo(&stack_a, &stack_b, 8);
 	return (0);
 }
