@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:54:34 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/31 21:33:36 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:58:37 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,14 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 55
+# endif
+
 void	check_arguments(int argc);
 char	**check(int argc, char **argv);
-int		ft_strcmp(const char *first, const char *second);
-void	check_arguments_int(int argc, char **argv);
-int		ft_strlen(char *str);
 void	check_duplication(char **splited);
-char	*ft_strjoin(int size, char **strs, char *sep);
+char	*ft_strjoin_(int size, char **strs, char *sep);
 char	**ft_split(char const *s, char c);
 long	ft_atoi(const char *str);
 void	plus_or_minus_case(char *str);
@@ -71,5 +72,9 @@ void	algo(t_stack **stack_a, t_stack **stack_b, int num_of_chunks);
 void	push_element_to_top_(t_stack **stack_a, int data, int flag);
 void	normal_case(t_stack **stack_a);
 int		get_before_max(t_stack **stack_b);
-void	ch(t_stack **stack_a, int chunk);
+char	*get_next_line(int fd);
+char	*ft_strjoin(char *s1, char *s2);
+int		ft_strchr(char *str, char c);
+char	*ft_strdup(char *s1);
+size_t	ft_strlen(const char *str);
 #endif

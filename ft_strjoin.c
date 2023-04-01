@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 12:30:22 by rennacir          #+#    #+#             */
-/*   Updated: 2023/03/15 12:52:14 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/01 15:28:51 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*for_line(int size, char **strs, char *sep, char *join)
 	return (join);
 }
 
-char	*ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin_(int size, char **strs, char *sep)
 {
 	int		i;
 	int		k;
@@ -57,6 +57,8 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	if (size <= 0)
 	{
 		join = malloc(sizeof(char));
+		if (!join)
+			return (NULL);
 		join[0] = '\0';
 		return (join);
 	}
@@ -64,6 +66,8 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		k += str_len(strs[i++]);
 	k += (str_len(sep) * (size - 1)) + 1;
 	join = malloc(sizeof(char) * k);
+	if (!join)
+		return (NULL);
 	join = for_line (size, strs, sep, join);
 	return (join);
 }
