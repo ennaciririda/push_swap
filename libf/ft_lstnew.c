@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_bonus.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 21:48:47 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/02 17:42:13 by rennacir         ###   ########.fr       */
+/*   Created: 2022/10/22 20:41:51 by rennacir          #+#    #+#             */
+/*   Updated: 2023/04/02 15:38:38 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	fill_stack(char **split, t_stack **stack_a)
+t_stack	*ft_lstnew(int data)
 {
-	int	i;
+	t_stack	*liste;
 
-	i = 0;
-	while (split[i])
-		ft_lstadd_back(stack_a, ft_lstnew(ft_atoi(split[i++])));
-}
-
-int	main(int argc, char **argv)
-{
-	t_stack	*stack_a;
-	t_stack	*stack_b;
-	char	**split;
-
-	check_arguments(argc);
-	split = check(argc, argv);
-	check_max_int(split);
-	check_duplication(split);
-	fill_stack(split, &stack_a);
-	checker(&stack_a, &stack_b);
-	return (0);
+	liste = malloc(sizeof(t_stack));
+	if (!liste)
+		return (0);
+	liste->data = data;
+	liste->next = NULL;
+	return (liste);
 }

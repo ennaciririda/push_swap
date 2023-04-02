@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_bonus.c                                       :+:      :+:    :+:   */
+/*   push_element_to_top.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 21:48:47 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/02 17:42:13 by rennacir         ###   ########.fr       */
+/*   Created: 2023/03/15 20:50:32 by rennacir          #+#    #+#             */
+/*   Updated: 2023/04/02 15:38:18 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	fill_stack(char **split, t_stack **stack_a)
+void	push_element_to_top(t_stack **stack_a)
 {
-	int	i;
-
-	i = 0;
-	while (split[i])
-		ft_lstadd_back(stack_a, ft_lstnew(ft_atoi(split[i++])));
-}
-
-int	main(int argc, char **argv)
-{
-	t_stack	*stack_a;
-	t_stack	*stack_b;
-	char	**split;
-
-	check_arguments(argc);
-	split = check(argc, argv);
-	check_max_int(split);
-	check_duplication(split);
-	fill_stack(split, &stack_a);
-	checker(&stack_a, &stack_b);
-	return (0);
+	if (get_index_of_min(stack_a) < (ft_lstsize(*stack_a) / 2) + 2)
+	{
+		while (get_index_of_min(stack_a) != 0)
+			ra(stack_a, 1);
+	}
+	else
+	{
+		while (get_index_of_min(stack_a) != 0)
+			rra(stack_a, 1);
+	}
 }

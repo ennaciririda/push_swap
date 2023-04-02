@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:54:34 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/01 21:05:47 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/02 18:32:15 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int		ft_lstsize(t_stack *lst);
 void	swap(int *a, int *b);
 void	sa(t_stack *stack_a, int i);
 void	sb(t_stack *stack_b, int i);
+void	ss(t_stack *stack_a, t_stack *stack_b);
 void	pa(t_stack **stack_a, t_stack **stack_b);
 void	pb(t_stack **stack_a, t_stack **stack_b);
 void	ra(t_stack **stack_a, int i);
@@ -77,7 +78,7 @@ char	*ft_strjoin(char *s1, char *s2);
 int		ft_strchr(char *str, char c);
 char	*ft_strdup(char *s1);
 size_t	ft_strlen(const char *str);
-int	is_sorted(t_stack **stack_a);
+int		is_sorted(t_stack **stack_a);
 void	checker(t_stack **stack_a, t_stack **stack_b);
-int	ft_strncmp(const char *first, const char *second, size_t n);
+int		ft_strncmp(const char *first, const char *second, size_t n);
 #endif

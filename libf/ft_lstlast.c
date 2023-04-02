@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_bonus.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 21:48:47 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/02 17:42:13 by rennacir         ###   ########.fr       */
+/*   Created: 2022/10/23 14:19:57 by rennacir          #+#    #+#             */
+/*   Updated: 2023/04/02 15:38:35 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	fill_stack(char **split, t_stack **stack_a)
+t_stack	*ft_lstlast(t_stack *lst)
 {
-	int	i;
-
-	i = 0;
-	while (split[i])
-		ft_lstadd_back(stack_a, ft_lstnew(ft_atoi(split[i++])));
-}
-
-int	main(int argc, char **argv)
-{
-	t_stack	*stack_a;
-	t_stack	*stack_b;
-	char	**split;
-
-	check_arguments(argc);
-	split = check(argc, argv);
-	check_max_int(split);
-	check_duplication(split);
-	fill_stack(split, &stack_a);
-	checker(&stack_a, &stack_b);
-	return (0);
+	while (lst)
+	{
+		if (!lst->next)
+			return (lst);
+		lst = lst->next;
+	}
+	return (lst);
 }
