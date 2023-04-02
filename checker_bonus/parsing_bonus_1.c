@@ -6,11 +6,11 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 21:21:59 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/01 13:59:44 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/01 21:47:15 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	check_duplication(char **splited)
 {

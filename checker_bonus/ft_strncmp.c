@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   normal_case.c                                      :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/25 17:01:59 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/01 20:59:23 by rennacir         ###   ########.fr       */
+/*   Created: 2022/10/16 17:48:43 by rennacir          #+#    #+#             */
+/*   Updated: 2023/04/01 21:47:34 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	normal_case(t_stack **stack_a)
+
+
+int	ft_strncmp(const char *first, const char *second, size_t n)
 {
-	t_stack	*tmp;
-	int		count;
+	size_t			i;
+	unsigned char	*f;
+	unsigned char	*s;
 
-	tmp = *stack_a;
-	count = 1;
-	while (tmp && tmp->next)
+	f = (unsigned char *)first;
+	s = (unsigned char *)second;
+	i = 0;
+	while ((f[i] || s[i]) && i < n)
 	{
-		if (tmp->data < tmp->next->data)
-			count++;
-		tmp = tmp->next;
+		if (f[i] != s[i])
+			return (f[i] - s[i]);
+			i++;
 	}
-	if (count == ft_lstsize(*stack_a))
-		exit(0);
+	return (0);
 }

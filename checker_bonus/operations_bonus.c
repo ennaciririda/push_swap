@@ -6,11 +6,11 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 13:48:13 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/01 13:59:40 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/01 21:47:18 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	swap(int *a, int *b)
 {

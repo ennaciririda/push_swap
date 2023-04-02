@@ -6,11 +6,11 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 21:29:00 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/01 13:59:29 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/01 21:47:24 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {

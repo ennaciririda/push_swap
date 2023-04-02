@@ -6,11 +6,11 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:46:06 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/01 13:59:14 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/01 21:47:27 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 char	*read_f(char *stvr, int fd)
 {

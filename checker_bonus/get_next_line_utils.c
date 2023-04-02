@@ -6,11 +6,12 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:46:53 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/01 13:59:09 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/01 21:46:33 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
+
 
 size_t	ft_strlen(const char *str)
 {

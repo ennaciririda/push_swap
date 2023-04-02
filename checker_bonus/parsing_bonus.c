@@ -6,11 +6,11 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:55:23 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/01 13:59:46 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/01 21:47:06 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	help_fun(int i)
 {
