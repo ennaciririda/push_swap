@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 14:54:34 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/02 18:32:15 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/03 01:22:54 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct s_stack
 #  define BUFFER_SIZE 55
 # endif
 
+void	func(void);
 void	check_arguments(int argc);
 char	**check(int argc, char **argv);
 void	check_duplication(char **splited);
@@ -81,4 +82,6 @@ size_t	ft_strlen(const char *str);
 int		is_sorted(t_stack **stack_a);
 void	checker(t_stack **stack_a, t_stack **stack_b);
 int		ft_strncmp(const char *first, const char *second, size_t n);
+void	cases(t_stack **stack_a, t_stack **stack_b);
+
 #endif
