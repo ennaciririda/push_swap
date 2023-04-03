@@ -6,7 +6,7 @@
 /*   By: rennacir <rennacir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 21:21:59 by rennacir          #+#    #+#             */
-/*   Updated: 2023/04/02 23:53:35 by rennacir         ###   ########.fr       */
+/*   Updated: 2023/04/03 01:58:02 by rennacir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,12 @@ void	check_max_int(char **splited)
 		}
 		i++;
 	}
+}
+
+void	is_sorted_check(t_stack *stack_a, t_stack *stack_b)
+{
+	if (is_sorted(&stack_a) == 0 && !stack_b)
+		write(1, "OK\n", 3);
+	else
+		write(1, "KO\n", 3);
 }
